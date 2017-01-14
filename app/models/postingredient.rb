@@ -1,0 +1,2 @@
+class Postingredient < ApplicationRecord
+end
