@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rdoc'
+
 # Use simple forms to make forms.... simpler
 gem 'simple_form'
 # use voting systems

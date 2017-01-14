@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>show.html.haml - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/comments_js_coffee.html">comments.js.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/posts_js_coffee.html">posts.js.coffee</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css_scss.html">application.css.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/home_css_scss.html">home.css.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/post_css_scss.html">post.css.scss</a>
+  
+    <li><a href="../../../app/views/comments/_form_html_haml.html">_form.html.haml</a>
+  
+    <li><a href="../../../app/views/layouts/application_html_haml.html">application.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/_form_html_haml.html">_form.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/edit_html_haml.html">edit.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/index_html_haml.html">index.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/new_html_haml.html">new.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/show_html_haml.html">show.html.haml</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/views/posts/show.html.haml">
+
+<p>post_show</p>
+
+<pre>%h1= @post.title
+%p.username
+    Shared by
+    = @post.user.name
+    about
+    = time_ago_in_words(@post.created_at)
+.clearfix
+    .post_image_description
+        - if @post.image.url(:medium) != nil
+            = image_tag @post.image.url(:medium)
+        .description= simple_format(@post.description)
+    .post_data
+        = link_to &quot;Visit Link&quot;, @post.link, class: &quot;button&quot;
+        = link_to like_post_path(@post), method: :get, class: &quot;data&quot; do
+            %i.fa.fa-thumbs-o-up
+            = pluralize(@post.get_upvotes.size, &quot;Like&quot;)
+        = link_to dislike_post_path(@post), method: :get, class: &quot;data&quot; do
+            %i.fa.fa-thumbs-o-down
+            = pluralize(@post.get_downvotes.size, &quot;Dislike&quot;)
+        %p.data
+            %i.fa.fa-comments-o
+            = pluralize(@post.comments.count, &quot;Comment&quot;)
+        - if @post.user == current_user
+            = link_to &quot;Edit&quot;, edit_post_path(@post), class: &quot;data&quot;
+            = link_to &quot;Delete&quot;, post_path(@post), method: :delete, data: { confirm: &quot;Are you sure?&quot; }, class: &quot;data&quot;
+    #random_post
+        %h3 Random Recipe
+        .post
+            .post_image
+                - if @random_post.image != nil
+                    = link_to (image_tag @random_post.image.url(:medium)), post_path(@random_post)
+            .post_content
+                .title
+                    %h2= link_to @random_post.title, post_path(@random_post)
+                .data.clearfix
+                    %p.username
+                        Shared by
+                        = @random_post.user.name
+                    %p.buttons
+                        %span
+                            %i.fa.fa-comments-o
+                            = @random_post.comments.count
+                        %span
+                            %i.fa.fa-thumbs-o-up
+                            = @random_post.get_likes.size</pre>
+
+<p>comments</p>
+
+<pre>%h2.comment_count= pluralize(@post.comments.count, &quot;Comment&quot;)
+- @comments.each do |comment|
+    .comment
+        %p.username= comment.user.name
+        %p.content= comment.content
+
+= render &quot;comments/form&quot;</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

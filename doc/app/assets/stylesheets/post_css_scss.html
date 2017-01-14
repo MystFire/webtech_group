@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>post.css.scss - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/comments_js_coffee.html">comments.js.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/posts_js_coffee.html">posts.js.coffee</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css_scss.html">application.css.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/home_css_scss.html">home.css.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/post_css_scss.html">post.css.scss</a>
+  
+    <li><a href="../../../app/views/comments/_form_html_haml.html">_form.html.haml</a>
+  
+    <li><a href="../../../app/views/layouts/application_html_haml.html">application.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/_form_html_haml.html">_form.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/edit_html_haml.html">edit.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/index_html_haml.html">index.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/new_html_haml.html">new.html.haml</a>
+  
+    <li><a href="../../../app/views/posts/show_html_haml.html">show.html.haml</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/stylesheets/post.css.scss">
+
+<p>post_show {</p>
+
+<pre>padding-top: 2rem;
+.post_image_description {
+        width: 50%;
+        float: left;
+        margin-right: 5%;
+}
+.post_data {
+        width: 15%;
+        float: left;
+        .button {
+                width: 100%;
+                display: inline-block;
+                padding: .75rem 0;
+                margin-bottom: 1rem;
+                text-align: center;
+                text-decoration: none;
+                color: #969696;
+                &amp;:hover {
+                        color: #50A7C7;
+                        border: 1px solid #50A7C7;
+                }
+        }
+        .data {
+                width: 100%;
+                display: block;
+                padding: .75rem 0;
+                border-bottom: 1px solid #E9E9E9;
+                text-decoration: none;
+                color: #969696;
+                margin: 0;
+        }
+}
+#random_post {
+        width: 25%;
+        margin-left: 5%;
+        margin-top: -3.2rem;
+        float: left;
+        h3 {
+                font-size: 1rem;
+        }
+        .post {
+                background: #F8F9FA;
+                border: 1px solid #E4E4E4;
+                border-radius: 0.3rem;
+                .post_image {
+                        height: 200px;
+                        overflow: hidden;
+                        img {
+                                width: 100%;
+                                border-radius: .3rem .3rem 0 0;
+                        }
+                }
+                .post_content {
+                        h2 {
+                                margin: 0;
+                                font-weight: 100;
+                                padding: 1rem 5%;
+                                border-bottom: 1px solid #E4E4E4;
+                                font-size: 1.25rem;
+                                a {
+                                        text-decoration: none;
+                                        color: #333233;
+                                        &amp;:hover {
+                                                color: #50A7C7;
+                                        }
+                                }
+                        }
+                        .data {
+                                padding: .75rem 5%;
+                                color: #969696;
+                                .username, .buttons {
+                                        margin: 0;
+                                        font-size: .8rem;
+                                }
+                                .username {
+                                        float: left;
+                                }
+                                .buttons {
+                                        float: right;
+                                        span {
+                                                margin-left: .5rem;
+                                        }
+                                }
+                        }
+                }
+        }
+}
+h1 {
+        margin: 0;
+        color: #333233;
+}
+img {
+        width: 100%;
+        border-radius: .3rem;
+}
+.username {
+        color: #969696;
+        margin: 0 0 1.5rem 0;
+}
+.description {
+        margin: 2rem 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #969696;
+}</pre>
+
+<p>}</p>
+
+<p>comments {</p>
+
+<pre>padding-bottom: 4rem;
+width: 50%;
+.comment_count {
+        border-bottom: 1px solid #E9E9E9;
+        padding-bottom: .5rem;
+        margin-bottom: 0;
+}
+.comment {
+        padding: 2rem 0;
+        border-bottom: 1px solid #E9E9E9;
+        padding-left: 5%;
+        .username {
+                font-size: 1.3rem;
+                color: #333233;
+                margin: 0 0 .5rem 0;
+        }
+        .content {
+                margin: 0;
+                color: #969696;
+        }
+}
+.comment_content {
+        margin-top: 2.5rem;
+        textarea {
+                width: 100%;
+                margin: 1rem 0;
+                min-height: 150px;
+                border: 1px solid #E4E4E4;
+                background: #F8F9FA;
+                border-radius: 0.3rem;
+        }
+}</pre>
+
+<p>}</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
