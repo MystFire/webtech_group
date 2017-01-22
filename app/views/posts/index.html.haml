@@ -6,21 +6,16 @@
         %span
             Share your recipies and help others find more
 - else
-    %p#intro
-        Wanna eat?
+    %h1#intro
+        Thinking about what to eat?
         %br/
         %span
             Find new recipies with extremely good ingredients
-
-%p#intro
-    %span
-        %small
-            type ingredients to find corresponding recipies
 #searchBar
     %span
-        %input#searchInput
+        %input#searchInput{ :type => "text", :placeholder => "Type ingredients to find corresponding recipies" }
         #searchButton
-            = button_to "search", posts_path, method: :get, params: { search_field: "" }
+            = button_to "Search", posts_path, method: :get, params: { search_field: "" }
 
 
 #posts
@@ -46,4 +41,9 @@
 :javascript
     $("#searchInput").on("change", function() {
         $("input[name='search_field']").val($("#searchInput").val());
-    });
+    }).keypress(function(e) {
+        if(e.which == 13) {
+            jQuery(this).blur();
+            jQuery("input[value=Search]").focus().click();
+        }
+    });	

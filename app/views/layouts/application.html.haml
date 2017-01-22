@@ -1,7 +1,7 @@
 !!!
 %html
 %head
-    %title Muse
+    %title Recipe Finder
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"}
@@ -10,11 +10,10 @@
 %body
     %header
         .wrapper.clearfix
-            #logo= link_to "Recipe searcher", root_path
+            #logo= link_to "Recipe Finder", root_path
             %nav
                 - if user_signed_in?
                     = link_to current_user.name, edit_user_registration_path
-                    = link_to "my recipies", posts_path, params: { user: true }
                     = link_to "Add New Recipe", new_post_path, class: "button"
                 - else
                     = link_to "Sign in", new_user_session_path
