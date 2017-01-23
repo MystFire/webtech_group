@@ -38,6 +38,7 @@ header {
 	width: 100%;
 	padding: 2rem 0;
 	border-bottom: 1px solid #E4E4E4;
+    background-color: #FFF;
 	#logo {
 		float: left;
 		font-size: 1.75rem;
@@ -120,6 +121,10 @@ body {
     font-weight: 100;
     background: url(http://i.imgur.com/bHkpd25.jpg) no-repeat fixed;
     background-size: cover;
+}
+
+header {
+    background-color: #FFF;
 }
 
 .button {
