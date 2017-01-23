@@ -80,5 +80,59 @@ input {
     float:right;
 }
 
+#intro {
+    margin: 2.75rem 0 1.75rem 0;
+    margin-top: 20%;
+    text-align: center;
+    font-size: 2.75rem;
+    line-height: 1;
+}
+
+span {
+    font-size: 1.25rem;
+    margin: 2.75rem 0 1.75rem 0;
+    margin-top: 20%;
+    text-align: center;
+    line-height: 1;
+}
+
+#searchInput {
+    width: 50%;
+    position:relative;
+    float:left;
+    left: 20%;
+    color: #9B9B9B;
+}
+
+#searchButton {
+    position:relative;
+    float:left;
+    left: 20%;
+    color: #9B9B9B;
+}
+
+a {
+    color: white;
+}
+
+body {
+    font-family: segoe ui, verdana, arial, sans-serif;
+    font-weight: 100;
+    background: url(http://i.imgur.com/bHkpd25.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.button {
+    color: black;
+}
+
+#posts {
+    margin-top: 15%;
+}
+
+#searchButton .button_to {
+    float: left;
+}
+
 @import 'home.css.scss';
 @import 'post.css.scss';
